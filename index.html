@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FNB App Academy</title>
-    <Link ref="stylesheet" type="text/css" href="style.css">
+    <Link ref="stylesheet" href="style.css">
 </head>
 <body>
     <h1>JavaScript Week 4</h1>
 
     <!-- Lesson 1 -->
+
     <div class="lesson">
         <h3>Lesson 1: Show text on Page</h3>
 
@@ -26,6 +27,7 @@
     </div>
 
     <!-- Lesson 2 -->
+
     <div class="lesson">
         <h2>Lesson 2: Variables (Text Storage)</h2>
 
@@ -175,10 +177,10 @@
                 function demostrateLocalScope() {
                     document.getElementById("scopeOutput").innerHTML = localVariable
                 }
-
-             </script>
+            </script>
         </div>
-
+        
+        <!-- lesson 10 -->
         <div class="lesson">
             <h2>Lesson 10: Mini Project - Login Form Part 1</h2>
             <p><strong>Concept:</strong> Getting user input from form elements</p>
@@ -206,6 +208,48 @@
 
             </script>
         </div>
+
+        <!-- Lesson 11 -->
+        <div class="lesson">
+            <h2>Lesson 11: Mini Project - Login form Part 2</h2>
+            <p><strong>Concept:</strong> Complete login verification with functions and conditionals</p>
+            <p><em>Try username: AppAcademy, password: 12@cademy</em></p>
+
+            <form>
+                <label for="usernameInput11">Username:</label>
+                <input type="text" id="usernameInput11"/> <br><br>
+
+                <label for="passwordInput11">Password:</label>
+                <input type="password" id="passwordInput11"/> <br><br>
+
+                <button type="button" onclick="verifyUser11()">Login</button>
+            </form>
+
+            <div class="output" id="message11">Enter credentials and click Login</div>
+
+            <script>
+                function verifyUser11() {
+                    var username = document.getElementById("usernameInput11").value;
+                    var password = document.getElementById("passwordInput11").value;
+
+                    checkUserCreds(username, pasword)
+                }
+
+                function checkUserCreds(username, password) {
+                    var adminUsername = "AppAcademy";
+                    var adminPassword = "12@cademy";
+
+                    if (username == adminUsername && password == adminPassword) {
+                        document.getElementById("message11").innerHTML = "Correct. Loggin you in...";
+                    } else {
+                        document.getElementById("message11").innerHTML = "Username or password is incorrect";
+                    }
+
+
+                }
+            </script>
+
+        
 
 </body>
 </html>

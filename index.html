@@ -10,8 +10,7 @@
     <h1>JavaScript Week 4</h1>
 
     <!-- Lesson 1 -->
-
-    <div class="lesson">
+     <div class="lesson">
         <h3>Lesson 1: Show text on Page</h3>
 
         <h2 id="heading1">Hello</h2>
@@ -27,8 +26,7 @@
     </div>
 
     <!-- Lesson 2 -->
-
-    <div class="lesson">
+     <div class="lesson">
         <h2>Lesson 2: Variables (Text Storage)</h2>
 
         <h2 id="heading2">Text will change</h2>
@@ -64,8 +62,7 @@
      </div>
 
      <!-- lesson 4 -->
-
-     <div class="lesson">
+      <div class="lesson">
          <h3>Lesson 4: If/Else Decisions (Conditinals)</h3>
 
          <input type="password" id="password" placeholder="Try 007">
@@ -87,8 +84,7 @@
      </div>
 
      <!-- lesson 5 -->
-
-        <div class ="lesson">
+      <div class ="lesson">
             <h3>lesson 5: Click events</h3>
 
             <h2 onclick="this.innerHTML='is awesome!' ">JavaScript</h2>
@@ -96,8 +92,7 @@
         </div>
 
         <!-- lesson 6 -->
-
-        <div class="lesson">
+         <div class="lesson">
             <h3>Lesson 6: Toggle Functions</h3>
             
             <h2 id="toggle" onclick="toggleText()">JavaScript</h2>
@@ -117,8 +112,7 @@
         </div>
 
         <!-- lesson 7 -->
-
-        <div class="lesson">
+         <div class="lesson">
             <h2>Lesson 7: Function Parameters</h2>
             <p><strong>Concept</strong>: Passing data into functions</p>
 
@@ -135,8 +129,7 @@
         </div>
 
         <!-- lesson 8 -->
-
-        <div class="Lesson">
+         <div class="Lesson">
             <h2>Lesson 8: Function Return</h2>
             <p><strong>Concept:</strong>Functions returning values to be used elsewhere.</p>
 
@@ -155,8 +148,7 @@
         </div>
 
         <!-- lesson 9 -->
-
-        <div class="lesson">
+         <div class="lesson">
             <h2>Lesson 9: Variable Scopes</h2>
             <p><strong>Concept:</strong>Understanding where variables can be used.</p>
 
@@ -210,46 +202,58 @@
         </div>
 
         <!-- Lesson 11 -->
-        <div class="lesson">
-            <h2>Lesson 11: Mini Project - Login form Part 2</h2>
-            <p><strong>Concept:</strong> Complete login verification with functions and conditionals</p>
-            <p><em>Try username: AppAcademy, password: 12@cademy</em></p>
+    <div class="lesson">
+        <h2>Lesson 11: Mini Project - Login Form Part 2</h2>
+        <p><strong>Concept:</strong> Complete login verification with functions and conditionals</p>
+        <p><em>Try username: AppAcademy, password: 12@cademy</em></p>
 
-            <form>
-                <label for="usernameInput11">Username:</label>
-                <input type="text" id="usernameInput11"/> <br><br>
+        <form>
+            <label for="usernameInput11">Username:</label>
+            <input type="text" id="usernameInput11"/> <br><br>
 
-                <label for="passwordInput11">Password:</label>
-                <input type="password" id="passwordInput11"/> <br><br>
+            <label for="passwordInput11">Password:</label>
+            <input type="password" id="passwordInput11"/> <br><br>
+            
+            <button type="button" onclick="verifyUser11()">Login</button>
+        </form>
 
-                <button type="button" onclick="verifyUser11()">Login</button>
-            </form>
+        <div class="output" id="message11">Enter credentials and click Login</div>
 
-            <div class="output" id="message11">Enter credentials and click Login</div>
+        <script>
+            function verifyUser11() {
+                var username = document.getElementById("usernameInput11").value;
+                var password = document.getElementById("passwordInput11").value;
+                checkUserCreds(username, password);
+            }
 
-            <script>
-                function verifyUser11() {
-                    var username = document.getElementById("usernameInput11").value;
-                    var password = document.getElementById("passwordInput11").value;
+            function checkUserCreds(username, password) {
+                var adminUsername = "AppAcademy";
+                var adminPassword = "12@cademy";
 
-                    checkUserCreds(username, pasword)
+                if (username == adminUsername && password == adminPassword) {
+                    document.getElementById("message11").innerHTML = "Correct. Logging you in...";
+                } else {
+                    document.getElementById("message11").innerHTML = "Username or password is incorrect";
                 }
+            }
 
-                function checkUserCreds(username, password) {
-                    var adminUsername = "AppAcademy";
-                    var adminPassword = "12@cademy";
-
-                    if (username == adminUsername && password == adminPassword) {
-                        document.getElementById("message11").innerHTML = "Correct. Loggin you in...";
-                    } else {
-                        document.getElementById("message11").innerHTML = "Username or password is incorrect";
-                    }
+        <!-- lesson 12-->
 
 
-                }
-            </script>
+        
 
-    </div>    
 
+
+        </script>
+
+    </div>
+
+    
+
+   
+
+
+        </script>
+     </div>
 </body>
 </html>
